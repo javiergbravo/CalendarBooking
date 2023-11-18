@@ -27,8 +27,8 @@ kotlin {
             baseName = "shared"
             isStatic = true
         }
-        extraSpecAttributes["resources"] =
-            "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
+//        extraSpecAttributes["resources"] =
+//            "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
 
     sourceSets {
@@ -40,6 +40,7 @@ kotlin {
             api(compose.runtime)
             api(compose.foundation)
             api(compose.material3)
+            api(libs.kotlinX.dateTime)
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             api(compose.components.resources)
         }
@@ -52,6 +53,7 @@ kotlin {
             api(libs.androidX.core)
             api(libs.appCompat)
             api(libs.compose.activity)
+            api(libs.compose.tooling)
         }
 
         sourceSets["androidUnitTest"].dependencies {}
@@ -70,18 +72,18 @@ kotlin {
 
 android {
     compileSdk = 34
-    namespace = "com.company.kmp_template.android"
+    namespace = "com.company.calendarbooking.android"
 
     defaultConfig {
         minSdk = 21
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_20
+        targetCompatibility = JavaVersion.VERSION_20
     }
     kotlin {
-        jvmToolchain(11)
+        jvmToolchain(20)
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

@@ -5,10 +5,10 @@ plugins {
 
 android {
     compileSdk = 34
-    namespace = "com.vickikbt.kmp_template"
+    namespace = "com.jgbravo.calendarbooking"
 
     defaultConfig {
-        applicationId = "com.vickikbt.kmp_template"
+        applicationId = "com.jgbravo.calendarbooking"
         minSdk = 21
         targetSdk = compileSdk
         versionCode = 1
@@ -22,12 +22,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_20
+        targetCompatibility = JavaVersion.VERSION_20
     }
 
     kotlin {
-        jvmToolchain(11)
+        jvmToolchain(20)
     }
 
     buildFeatures {
@@ -35,7 +35,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
 }
 

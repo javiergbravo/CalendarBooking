@@ -1,4 +1,4 @@
-rootProject.name = "KMP_Template"
+rootProject.name = "Calendar Booking"
 
 pluginManagement {
     repositories {

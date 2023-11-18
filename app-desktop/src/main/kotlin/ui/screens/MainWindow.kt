@@ -7,7 +7,7 @@ import androidx.compose.ui.window.ApplicationScope
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.rememberWindowState
-import com.vickikbt.kmptemplate.ui.screens.MainScreen
+import com.jgbravo.calendarbooking.ui.screens.MainScreen
 
 @Composable
 fun MainWindow(applicationScope: ApplicationScope) {
