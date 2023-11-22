@@ -26,7 +26,7 @@ buildKonfig = "0.13.3"
 kover = "0.6.1"
 mockk = "1.13.4"
 kotlinxTestResources = "0.2.2"
-voyager = "1.0.0-rc03"
+voyager = "1.0.0-rc10"
 
 #Android Versions
 
