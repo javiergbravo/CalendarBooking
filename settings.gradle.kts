@@ -1,4 +1,4 @@
-rootProject.name = "Calendar Booking"
+rootProject.name = "CalendarBooking"
 
 pluginManagement {
     repositories {

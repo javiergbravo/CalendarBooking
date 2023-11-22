@@ -45,9 +45,9 @@ kotlin {
             api(compose.components.resources)
         }
 
-        sourceSets["commonTest"].dependencies {
+        /*sourceSets["commonTest"].dependencies {
             implementation(libs.kotlin.test)
-        }
+        }*/
 
         sourceSets["androidMain"].dependencies {
             api(libs.androidX.core)
@@ -56,17 +56,17 @@ kotlin {
             api(libs.compose.tooling)
         }
 
-        sourceSets["androidUnitTest"].dependencies {}
+//        sourceSets["androidUnitTest"].dependencies {}
 
         sourceSets["iosMain"].dependencies {
         }
 
-        sourceSets["iosTest"].dependencies {}
+//        sourceSets["iosTest"].dependencies {}
 
         sourceSets["jvmMain"].dependencies {
         }
 
-        sourceSets["jvmTest"].dependencies {}
+//        sourceSets["jvmTest"].dependencies {}
     }
 }
 
@@ -79,11 +79,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_20
-        targetCompatibility = JavaVersion.VERSION_20
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
-        jvmToolchain(20)
+        jvmToolchain(17)
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
