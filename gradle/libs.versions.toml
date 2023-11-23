@@ -130,7 +130,7 @@ accompanist-insets = { module = "com.google.accompanist:accompanist-insets", ver
 accompanist-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
 accompanist-systemUIController = { module = "com.google.accompanist:accompanist-systemuicontroller", version = "0.17.0" }
 accompanist-materialPlaceHolder = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
-accompanist-pagerIndicator = { module = "com.google.accompanist:accompanist-pager-indicators", version = "0.22.0-rc" }
+accompanist-pagerIndicator = { module = "com.google.accompanist:accompanist-pager-indicators", version = "0.32.0" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
