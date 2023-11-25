@@ -8,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.jgbravo.calendarbooking.core.date.Date
 import com.jgbravo.calendarbooking.core.date.DateUtils.getWeek
 import com.jgbravo.calendarbooking.ui.components.HeaderDateInfo
 import com.jgbravo.calendarbooking.ui.components.WeekCalendar
@@ -23,6 +24,9 @@ fun CalendarScreen(
     Column(modifier = modifier.fillMaxSize()) {
         HeaderDateInfo(
             daySelected = calendarUiModel.selectedDate,
+            onTodaySelect = {
+                calendarUiModel = Date.TODAY.getWeek()
+            },
             onPrevClick = { startDate ->
                 calendarUiModel = startDate.getWeek()
             },
@@ -35,7 +39,9 @@ fun CalendarScreen(
             onDateClick = { date ->
                 calendarUiModel = calendarUiModel.copy(
                     selectedDate = date,
-                    visibleDates = calendarUiModel.visibleDates.map { it.copy(isSelected = it == date) }
+                    visibleDates = calendarUiModel.visibleDates.map {
+                        it.copy(isSelected = it == date)
+                    }
                 )
             }
         )

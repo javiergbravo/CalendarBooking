@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.jgbravo.calendarbooking.core.date.Date
+import com.jgbravo.calendarbooking.core.string.abbreviate
 
 @Composable
 fun DaySelector(
@@ -38,10 +39,8 @@ fun DaySelector(
                 .height(48.dp)
                 .padding(4.dp)
         ) {
-            val dayName: String = day.dayName.take(3).lowercase()
-                .replaceFirstChar { it.uppercase() }
             Text(
-                text = dayName,
+                text = day.dayName.abbreviate(),
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 style = MaterialTheme.typography.bodySmall,
                 maxLines = 1
