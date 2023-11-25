@@ -1,5 +1,6 @@
 package com.jgbravo.calendarbooking.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -15,9 +16,14 @@ import androidx.compose.ui.unit.dp
 import com.jgbravo.calendarbooking.core.date.Date
 
 @Composable
-fun DaySelector(day: Date) {
+fun DaySelector(
+    day: Date,
+    onClick: (Date) -> Unit
+) {
     Card(
-        modifier = Modifier.padding(4.dp),
+        modifier = Modifier
+            .padding(4.dp)
+            .clickable { onClick(day) },
         colors = CardDefaults.cardColors(
             containerColor = if (day.isSelected) {
                 MaterialTheme.colorScheme.primary
