@@ -46,7 +46,7 @@ fun DaySelector(
                 maxLines = 1
             )
             Text(
-                text = "${day.dayOfMonth}",
+                text = "${day.date.dayOfMonth}",
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 style = MaterialTheme.typography.bodyMedium,
                 maxLines = 1

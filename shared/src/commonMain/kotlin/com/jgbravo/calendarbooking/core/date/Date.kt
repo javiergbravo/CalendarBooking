@@ -8,7 +8,6 @@ data class Date(
 ) {
     val dayName: String = date.dayOfWeek.name.lowercase().replaceFirstChar { it.uppercase() }
     val monthName: String = date.month.name.lowercase().replaceFirstChar { it.uppercase() }
-    val dayOfMonth: Int = date.dayOfMonth
 
     fun isToday(): Boolean = date == DateTimeUtil.now().date
 

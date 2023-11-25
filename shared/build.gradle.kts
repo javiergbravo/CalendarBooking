@@ -7,7 +7,7 @@ plugins {
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    kotlin.applyDefaultHierarchyTemplate()
 
     androidTarget()
 
@@ -40,6 +40,7 @@ kotlin {
             api(compose.runtime)
             api(compose.foundation)
             api(compose.material3)
+//            api(libs.coil)
             api(libs.kotlinX.dateTime)
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             api(compose.components.resources)
