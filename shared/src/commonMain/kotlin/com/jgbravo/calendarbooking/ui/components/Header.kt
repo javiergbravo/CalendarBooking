@@ -10,11 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.jgbravo.calendarbooking.core.date.Date
-import com.jgbravo.calendarbooking.core.date.DatePattern.SPANISH_DATE_PATTERN
-import com.jgbravo.calendarbooking.core.date.DateTimeUtil.formatDate
 import com.jgbravo.calendarbooking.core.date.DateUtils.WEEK_DAYS
 import com.jgbravo.calendarbooking.core.date.DateUtils.daysAfter
 import com.jgbravo.calendarbooking.core.date.DateUtils.daysBefore
+import com.jgbravo.calendarbooking.core.date.DateUtils.info
 
 @Composable
 fun HeaderDateInfo(
@@ -25,8 +24,10 @@ fun HeaderDateInfo(
 ) {
     Row {
         Text(
-            text = if (daySelected.isToday()) "Today" else {
-                daySelected.date.formatDate(SPANISH_DATE_PATTERN)
+            text = if (daySelected.isToday()) {
+                "Today"
+            } else {
+                daySelected.info()
             },
             modifier = Modifier
                 .weight(1f)

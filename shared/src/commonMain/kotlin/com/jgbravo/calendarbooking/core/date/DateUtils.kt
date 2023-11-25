@@ -1,5 +1,6 @@
 package com.jgbravo.calendarbooking.core.date
 
+import com.jgbravo.calendarbooking.core.string.abbreviate
 import com.jgbravo.calendarbooking.ui.models.CalendarUiModel
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.DayOfWeek
@@ -31,6 +32,10 @@ object DateUtils {
     fun Date.daysBefore(days: Int): Date {
         val newDate = date.minus(DateTimeUnit.DayBased(days))
         return Date(newDate, newDate == DateTimeUtil.now().date)
+    }
+
+    fun Date.info(): String {
+        return "$dayName ${date.dayOfMonth}, ${monthName.abbreviate()} ${date.year}"
     }
 
     private fun LocalDate.daysShift(days: Int): LocalDate = when {
