@@ -10,7 +10,9 @@ import kotlinx.datetime.LocalDateTime
 
 object Dummy {
 
-    private const val profileImage = "https://avatars.githubusercontent.com/u/1024021"
+    private fun getImageUrl(id: Int = (237..260).random()): String {
+        return "https://picsum.photos/id/$id/200/300"
+    }
 
     fun getSchedule(date: Date): Schedule {
         val weekCalendar = CalendarUi(
@@ -68,60 +70,60 @@ object Dummy {
     private val profileJavi = ProfileUi(
         id = "1",
         name = "Javi",
-        image = profileImage
+        image = getImageUrl(237)
     )
 
     private val profileAgus = ProfileUi(
         id = "2",
         name = "Agus",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileMarta = ProfileUi(
         id = "3",
         name = "Marta",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileSara = ProfileUi(
         id = "4",
         name = "Sara",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileSergio = ProfileUi(
         id = "5",
         name = "Sergio",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileDavid = ProfileUi(
         id = "6",
         name = "David",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileAlex = ProfileUi(
         id = "7",
         name = "Alex",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileJorge = ProfileUi(
         id = "8",
         name = "Jorge",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileEdu = ProfileUi(
         id = "9",
         name = "Edu",
-        image = profileImage
+        image = getImageUrl()
     )
 
     private val profileSafa = ProfileUi(
         id = "10",
         name = "Safa",
-        image = profileImage
+        image = getImageUrl()
     )
 }
