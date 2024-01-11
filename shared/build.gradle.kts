@@ -55,6 +55,9 @@ kotlin {
             api(libs.appCompat)
             api(libs.compose.activity)
             api(libs.compose.tooling)
+            api(libs.compose.runtime)
+            api(libs.compose.foundation)
+            api(libs.compose.material3)
         }
 
 //        sourceSets["androidUnitTest"].dependencies {}
@@ -85,6 +88,9 @@ android {
     }
     kotlin {
         jvmToolchain(17)
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerVersion.get()
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

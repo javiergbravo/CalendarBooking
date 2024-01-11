@@ -12,6 +12,8 @@ firebasePerformance = "1.4.2"
 # Kotlin Multiplatform Version
 kotlinxCoroutines = "1.7.3"
 composeMultiplatform = "1.5.11"
+kotlinCompilerVersion = "1.5.5"
+composeFoundation = "1.5.5"
 koinCore = "3.5.3"
 koinAndroid = "3.5.3"
 koinCompose = "3.5.3"
@@ -125,6 +127,7 @@ compose-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose"
 compose-constraintLayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "composeConstraintLayout" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-foundation = "androidx.compose.foundation:foundation:${versions.compose-foundation}"
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
 accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
 accompanist-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
