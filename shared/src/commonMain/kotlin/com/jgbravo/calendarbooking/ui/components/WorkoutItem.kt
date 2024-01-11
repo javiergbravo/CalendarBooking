@@ -25,8 +25,8 @@ fun WorkoutItem(workout: WorkoutUi) {
         WorkoutHeader(workout = workout)
         Spacer(modifier = Modifier.padding(4.dp))
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             workout.bookings.forEach { profile ->
                 ProfileItem(
@@ -41,8 +41,7 @@ fun WorkoutItem(workout: WorkoutUi) {
 @Composable
 fun WorkoutHeader(workout: WorkoutUi) {
     Row(
-        modifier = Modifier
-            .fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
