@@ -12,6 +12,8 @@ firebasePerformance = "1.4.2"
 # Kotlin Multiplatform Version
 kotlinxCoroutines = "1.7.3"
 composeMultiplatform = "1.5.11"
+kotlinCompilerVersion = "1.5.5"
+composeFoundation = "1.5.5"
 koinCore = "3.5.3"
 koinAndroid = "3.5.3"
 koinCompose = "3.5.3"
@@ -41,7 +43,8 @@ composeConstraintLayout = "1.1.0-alpha13"
 accompanist = "0.32.0"
 navigation = "2.7.6"
 lifecycle = "2.7.0"
-coil = "2.2.2"
+coil = "3.0.0-alpha01"
+kamel = "0.9.1"
 palette = "1.0.0"
 paging = "3.0.0"
 coroutines = "1.5.2"
@@ -114,7 +117,7 @@ voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", v
 #Android Lib Dependencies
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 androidX-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
-material = { module = "com.google.android.material:material", version.ref = "material" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
 constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
@@ -125,6 +128,7 @@ compose-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose"
 compose-constraintLayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "composeConstraintLayout" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "composeFoundation" }
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
 accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
 accompanist-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
@@ -135,7 +139,9 @@ lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", versi
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
-coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
+coil-network = "io.coil-kt.coil3:coil-network:3.0.0-alpha02"
+kamel = { module = "media.kamel:kamel-image", version.ref = "kamel" }
 palette = { module = "androidx.palette:palette", version.ref = "palette" }
 compose-ratingBar = { module = "com.github.a914-gowtham:compose-ratingbar", version.ref = "composeRatingBar" }
 leakCanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakCanary" }
@@ -144,6 +150,9 @@ firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx" }
 firebase-performance = { module = "com.google.firebase:firebase-perf" }
 oneBoneToolbar = { module = "me.onebone:toolbar-compose", version.ref = "oneBoneToolbar" }
+
+#iOS Lib Dependencies
+ktor-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 
 #Tests Lib Dependencies
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }

@@ -2,7 +2,7 @@ package com.jgbravo.calendarbooking.ui.models
 
 import com.jgbravo.calendarbooking.core.date.Date
 
-data class CalendarUiModel(
+data class CalendarUi(
     val selectedDate: Date = Date.TODAY,
     val visibleDates: List<Date>
 ) {

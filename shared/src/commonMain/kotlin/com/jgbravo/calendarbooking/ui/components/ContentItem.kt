@@ -1,8 +1,6 @@
 package com.jgbravo.calendarbooking.ui.components
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
@@ -15,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.jgbravo.calendarbooking.core.date.Date
 import com.jgbravo.calendarbooking.core.string.abbreviate
+import com.jgbravo.calendarbooking.ui.theme.Gray
 
 @Composable
 fun DaySelector(
@@ -23,34 +22,32 @@ fun DaySelector(
 ) {
     Card(
         modifier = Modifier
+            .clickable { onClick(day) }
             .padding(4.dp)
-            .clickable { onClick(day) },
+            .width(45.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (day.isSelected) {
                 MaterialTheme.colorScheme.primary
             } else {
-                MaterialTheme.colorScheme.secondary
+                Gray
             }
         ),
     ) {
-        Column(
+        Text(
+            text = day.dayName.abbreviate(),
             modifier = Modifier
-                .width(45.dp)
-                .height(48.dp)
-                .padding(4.dp)
-        ) {
-            Text(
-                text = day.dayName.abbreviate(),
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                style = MaterialTheme.typography.bodySmall,
-                maxLines = 1
-            )
-            Text(
-                text = "${day.dayOfMonth}",
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                style = MaterialTheme.typography.bodyMedium,
-                maxLines = 1
-            )
-        }
+                .padding(top = 4.dp)
+                .align(Alignment.CenterHorizontally),
+            style = MaterialTheme.typography.bodySmall,
+            maxLines = 1
+        )
+        Text(
+            text = "${day.date.dayOfMonth}",
+            modifier = Modifier
+                .padding(top = 4.dp)
+                .align(Alignment.CenterHorizontally),
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1
+        )
     }
 }

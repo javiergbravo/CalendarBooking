@@ -35,10 +35,14 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.5"
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerVersion.get()
     }
 }
 
 dependencies {
     implementation(project(":shared"))
+    implementation(libs.compose.tooling)
+    implementation(libs.compose.runtime)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.material3)
 }

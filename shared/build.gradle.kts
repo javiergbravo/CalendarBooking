@@ -7,7 +7,7 @@ plugins {
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    kotlin.applyDefaultHierarchyTemplate()
 
     androidTarget()
 
@@ -40,6 +40,8 @@ kotlin {
             api(compose.runtime)
             api(compose.foundation)
             api(compose.material3)
+            api(libs.kamel)
+            api(libs.ktor.core)
             api(libs.kotlinX.dateTime)
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             api(compose.components.resources)
@@ -54,11 +56,16 @@ kotlin {
             api(libs.appCompat)
             api(libs.compose.activity)
             api(libs.compose.tooling)
+            api(libs.compose.runtime)
+            api(libs.compose.foundation)
+            api(libs.compose.material3)
+            api(libs.ktor.android)
         }
 
 //        sourceSets["androidUnitTest"].dependencies {}
 
         sourceSets["iosMain"].dependencies {
+            api(libs.ktor.darwin)
         }
 
 //        sourceSets["iosTest"].dependencies {}
@@ -84,6 +91,12 @@ android {
     }
     kotlin {
         jvmToolchain(17)
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerVersion.get()
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

@@ -1,6 +1,7 @@
 package com.jgbravo.calendarbooking.ui.components
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
@@ -9,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.jgbravo.calendarbooking.core.date.Date
 import com.jgbravo.calendarbooking.core.date.DateUtils.WEEK_DAYS
 import com.jgbravo.calendarbooking.core.date.DateUtils.daysAfter
@@ -21,8 +23,9 @@ fun HeaderDateInfo(
     onTodaySelect: () -> Unit,
     onPrevClick: (Date) -> Unit,
     onNextClick: (Date) -> Unit,
+    modifier: Modifier = Modifier
 ) {
-    Row {
+    Row(modifier = modifier.padding(horizontal = 16.dp)) {
         Text(
             text = if (daySelected.isToday()) {
                 "Today"
