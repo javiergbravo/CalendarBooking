@@ -132,7 +132,7 @@ compose-foundation = { module = "androidx.compose.foundation:foundation", versio
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
 accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
 accompanist-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
-accompanist-systemUIController = { module = "com.google.accompanist:accompanist-systemuicontroller", version = "0.17.0" }
+accompanist-systemUIController = { module = "com.google.accompanist:accompanist-systemuicontroller", version = "0.34.0" }
 accompanist-materialPlaceHolder = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
 accompanist-pagerIndicator = { module = "com.google.accompanist:accompanist-pager-indicators", version = "0.34.0" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
