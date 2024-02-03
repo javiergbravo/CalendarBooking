@@ -27,7 +27,7 @@ kmpNativeCoroutines = "0.12.1-new-mm"
 buildKonfig = "0.15.1"
 kover = "0.6.1"
 mockk = "1.13.9"
-kotlinxTestResources = "0.2.2"
+kotlinxTestResources = "0.4.0"
 voyager = "1.0.0"
 
 #Android Versions
