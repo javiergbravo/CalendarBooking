@@ -50,7 +50,7 @@ paging = "3.0.0"
 coroutines = "1.5.2"
 firebaseBOM = "32.8.1"
 composeRatingBar = "1.1.1"
-leakCanary = "2.13"
+leakCanary = "2.14"
 pagingCompose = "1.0.0-alpha14"
 oneBoneToolbar = "2.3.4"
 
