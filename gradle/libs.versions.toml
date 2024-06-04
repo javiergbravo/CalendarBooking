@@ -11,7 +11,7 @@ firebasePerformance = "1.4.2"
 
 # Kotlin Multiplatform Version
 kotlinxCoroutines = "1.8.1"
-composeMultiplatform = "1.6.10"
+composeMultiplatform = "1.6.11"
 kotlinCompilerVersion = "1.5.5"
 composeFoundation = "1.6.7"
 koinCore = "3.5.6"
