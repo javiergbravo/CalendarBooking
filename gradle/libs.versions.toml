@@ -55,7 +55,7 @@ pagingCompose = "1.0.0-alpha14"
 oneBoneToolbar = "2.3.4"
 
 jUnit = "4.13.2"
-truth = "1.4.2"
+truth = "1.4.3"
 robolectric = "4.12.2"
 jUnitKtx = "1.2.1"
 espresso = "3.6.1"
