@@ -26,7 +26,7 @@ multiplatformSettings = "1.3.0"
 kmpNativeCoroutines = "0.12.1-new-mm"
 buildKonfig = "0.15.2"
 kover = "0.6.1"
-mockk = "1.13.14"
+mockk = "1.13.16"
 kotlinxTestResources = "0.10.0"
 voyager = "1.0.1"
 
