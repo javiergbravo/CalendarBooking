@@ -5,7 +5,7 @@ ktLint = "12.1.2"
 detekt = "1.19.0"
 gradleVersionUpdate = "0.51.0"
 googleServices = "4.4.2"
-firebaseAppDistribution = "5.1.0"
+firebaseAppDistribution = "5.1.1"
 firebaseCrashlytics = "3.0.2"
 firebasePerformance = "1.4.2"
 
