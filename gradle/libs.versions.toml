@@ -32,7 +32,7 @@ voyager = "1.0.1"
 
 #Android Versions
 
-androidxCore = "1.13.1"
+androidxCore = "1.16.0"
 material = "1.11.0"
 appCompat = "1.7.0"
 constraintLayout = "2.2.1"
